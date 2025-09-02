@@ -17,6 +17,7 @@ import jp.ac.meijou.android.s241205144.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
+    private PrefDataStore prefDataStore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +30,10 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        binding.button.setOnClickListener(view -> {
+        prefDataStore = PrefDataStore.getInstance(this);
+        binding.savebutton.setOnClickListener(view -> {
             var text = binding.editTextText.getText().toString();
-            binding.text.setText(text);
+            prefDataStore.setString("name",text);
         });
         binding.editTextText.addTextChangedListener(new TextWatcher() {
             @Override
