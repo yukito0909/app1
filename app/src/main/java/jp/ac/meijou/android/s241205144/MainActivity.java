@@ -36,6 +36,11 @@ public class MainActivity extends AppCompatActivity {
             prefDataStore.setString("name",text);
         });
 
+        binding.button.setOnClickListener(view ->{
+            var text = binding.editTextText.getText().toString();
+            binding.text.setText(text);
+        });
+
     }
 
     @Override
