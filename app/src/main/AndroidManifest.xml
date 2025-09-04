@@ -15,16 +15,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-            android:name=".gist"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity5"
-            android:exported="true">
+            android:name=".MainActivity6"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".gist"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivity5"
+            android:exported="true">
         </activity>
         <activity
             android:name=".MainActivity4"
@@ -35,11 +40,6 @@
         <activity
             android:name=".MainActivity2"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
